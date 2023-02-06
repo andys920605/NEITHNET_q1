@@ -1,0 +1,42 @@
+server:
+  AppVersion: 0.1
+  Port: 8080
+  PprofPort: 5558
+  ReadTimeout: 3
+  WriteTimeout: 3
+  CtxDefaultTimeout: 3
+  Debug: true
+  IsIIS: false
+
+postgres:
+  Host: postgres
+  Port: 5432
+  User: root
+  Password: admin
+  Dbname: q1
+  Schema: public
+  Sslmode: false
+  PgDriver: postgres
+
+redis:
+  RedisAddr: 10.111.39.139:6379
+  RedisPassword: 
+  RedisDb: 0
+  RedisDefaultdb: 0
+  MinIdleConns: 200
+  PoolSize: 12000
+  PoolTimeout: 240
+  Password: f0f45ecc-df58-40f5-b83e-bb8ba145c49c
+  DB: 0
+  AcctCacheTTL: 3
+
+logger:
+  Development: true
+  DisableCaller: false
+  Encoding: json
+  Level: info
+  EnableFile: false
+  InfoFileName: "./logs/server.log"
+  MaxBackups: 5
+  MaxAge: 30
+  MaxSize: 1
