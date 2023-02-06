@@ -27,6 +27,14 @@ docker compose up
 
 * than the api and db will be ready!
 
+* if error message show as follow 
+
+```javascript
+standard_init_linux.go:228: exec user process caused: no such file or directory
+```
+
+* set the shell file newline symbol to LF
+
 
 
 
