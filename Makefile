@@ -16,13 +16,13 @@ dropdb:
 	docker exec -it postgres12 dropdb q1
 
 migrateup:
-	migrate -path db/migration -database "postgresql://root:admin@localhost:5432/q1?sslmode=disable&search_path=${POSTGRES_DB_SCHEMA}" -verbose up
+	migrate -path migration -database "postgresql://root:admin@localhost:5432/q1?sslmode=disable&search_path=${POSTGRES_DB_SCHEMA}" -verbose up
 migrateup1:
-	migrate -path db/migration -database "postgresql://root:admin@localhost:5432/q1?sslmode=disable&search_path=${POSTGRES_DB_SCHEMA}" -verbose up 1
+	migrate -path migration -database "postgresql://root:admin@localhost:5432/q1?sslmode=disable&search_path=${POSTGRES_DB_SCHEMA}" -verbose up 1
 migratedown:
-	migrate -path db/migration -database "postgresql://root:admin@localhost:5432/q1?sslmode=disable&search_path=${POSTGRES_DB_SCHEMA}" -verbose down
+	migrate -path migration -database "postgresql://root:admin@localhost:5432/q1?sslmode=disable&search_path=${POSTGRES_DB_SCHEMA}" -verbose down
 migratedown1:
-	migrate -path db/migration -database "postgresql://root:admin@localhost:5432/q1?sslmode=disable&search_path=${POSTGRES_DB_SCHEMA}" -verbose down 1
+	migrate -path migration -database "postgresql://root:admin@localhost:5432/q1?sslmode=disable&search_path=${POSTGRES_DB_SCHEMA}" -verbose down 1
 
 test:
 	go test -v -cover ./...
