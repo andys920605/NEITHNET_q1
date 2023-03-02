@@ -3,7 +3,7 @@ set timezone to 'Asia/Taipei';
 CREATE TABLE IF NOT EXISTS comments (
   id                  SERIAL PRIMARY KEY,
   uuid                char(36) UNIQUE NOT NULL,
-  parentid            char(36) UNIQUE NOT NULL,
+  parentid            char(36) NOT NULL,
   comment             varchar(500),
   author              varchar(50),
   favorite            boolean,
